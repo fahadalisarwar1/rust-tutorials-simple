@@ -9,8 +9,7 @@ fn main() {
     let filename = "hobbies.txt";
     let mut text = String::new();
 
-    let mut file = File::open(filename).expect("cant find file");
-    file.read_to_string(&mut text).unwrap();
-
+    let mut file = File::open(filename).unwrap();
+    file.read_to_string(&mut text);
     println!("{}", text);
 }
